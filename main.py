@@ -40,9 +40,9 @@ def main():
             print(f"-----------Tolerance: {toll}-----------")
             results[f'Jacobi_{toll}'] = it.jacobi(toll)
             results[f'GaussSeidel_{toll}'] = it.Gauss_Seidel(toll)
-            results[f'Gradient_{toll}'] = it.CG(toll)
+            results[f'Gradient_{toll}'] = it.gradient(toll)
             if(spd_cond):
-                results[f'ConjugateGradient_{toll}'] = it.CG_conj(toll)
+                results[f'ConjugateGradient_{toll}'] = it.CG(toll)
     
         it.groupPlotResult(results,tolerances,methods,file)
 
